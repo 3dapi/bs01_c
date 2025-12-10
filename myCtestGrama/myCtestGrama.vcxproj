@@ -22,7 +22,7 @@
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{634f7e02-25b0-4f5e-a424-6f466fe20180}</ProjectGuid>
-    <RootNamespace>myCprogramming</RootNamespace>
+    <RootNamespace>myCtestGrama</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

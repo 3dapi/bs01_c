@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.36631.11
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "myCprogramming", "myCprogramming.vcxproj", "{634F7E02-25B0-4F5E-A424-6F466FE20180}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "myCtestGrama", "myCtestGrama.vcxproj", "{634F7E02-25B0-4F5E-A424-6F466FE20180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

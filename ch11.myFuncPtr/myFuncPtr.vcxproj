@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch09_ptr07_swap.c" />
+    <ClCompile Include="ch11_fp_array.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1221e4d1-3400-456e-b5ca-7aa80407f2c0}</ProjectGuid>
-    <RootNamespace>myPointer</RootNamespace>
+    <ProjectGuid>{a4570cdf-d106-4b35-81ad-d34c25308d72}</ProjectGuid>
+    <RootNamespace>myFuncPtr</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
