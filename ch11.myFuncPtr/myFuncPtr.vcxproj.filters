@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch10_union01.c">
+    <ClCompile Include="ch11_fp_array.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
