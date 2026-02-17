@@ -6,6 +6,6 @@ int InitGameResult(void);
 int UpdateGameResult(void);
 int DestroyGameResult(void);
 
-void MenuGameResult(void);
+void DrawGameResult(void);
 
 #endif // _GameResult_H_

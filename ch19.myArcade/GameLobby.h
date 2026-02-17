@@ -6,6 +6,6 @@ int InitGameLobby(void);
 int UpdateGameLobby(void);
 int DestroyGameLobby(void);
 
-void MenuGameLobby(void);
+void DrawGameLobby(void);
 
 #endif // _GameLobby_H_

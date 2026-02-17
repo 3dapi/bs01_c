@@ -6,6 +6,6 @@ int InitGamePlayOddEven(void);
 int UpdateGamePlayOddEven(void);
 int DestroyGamePlayOddEven(void);
 
-void MenuGamePlayOddEven(void);
+void DrawGamePlayOddEven(void);
 
 #endif // _GamePlayOddEven_H_

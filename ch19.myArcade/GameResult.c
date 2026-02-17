@@ -1,41 +1,50 @@
 ﻿#include <stdio.h>
 #include <string.h>
+#include "AppCommon.h"
+#include "AppData.h"
+#include "AppInput.h"
 #include "GameResult.h"
 
 // GameResult 초기화.
 int InitGameResult(void)
 {
-	printf("InitGameResult\n");
-	return 0;
+    printf("InitGameResult\n");
+    return 0;
 }
 
 // GameResult 업데이트.
 int UpdateGameResult(void)
 {
-	printf("UpdateGameResult\n");
-	return 0;
+    if     (GetKeyEvent('L') || GetKeyEvent('l'))
+    {
+        ChangeGameState(GAME_LOBBY);
+    }
+    else if(GetKeyEvent('Q') || GetKeyEvent('q'))
+    {
+        ChangeGameState(GAME_QUIT);
+    }
+    return 0;
 }
 
 // GameResult 해제.
 int DestroyGameResult(void)
 {
-	printf("DestroyGameResult\n");
-	return 0;
+    printf("DestroyGameResult\n");
+    return 0;
 }
 
-void MenuGameResult(void)
+void DrawGameResult(void)
 {
-	printf("\n");
-	printf("========================================================\n");
-	printf("[게임 결과]\n");
-	printf("========================================================\n");
-	printf("\n");
-	printf("게임: UpDown\n");
-	printf("결과: WIN\n");
-	printf("총 시도: 4 회\n");
-	printf("\n");
-	printf("--------------------------------------------------------\n");
-	printf("[최근 기록]\n");
-	printf("2026-02-16  17:32:10   UpDown   3:2   WIN\n");
-	printf("2026-02-16  17:18:02   홀짝      3:1   WIN\n");
+    const GAME_PLAY_RESULT* playedResult = GetRecentGamePlay();
+
+    printf("\n");
+    printf("========================================================\n");
+    printf("        [게임 결과]\n");
+    printf("========================================================\n");
+    printf("\n");
+    printf("게임: %s\n", playedResult->playedGame);
+    printf("결과: %s\n", playedResult->playedWin? "WIN" : "LOSE");
+    printf("\n--------------------------------------------------------\n\n");
+    printf("메뉴: [L] 로비로 이동     [Q] 종료\n");
+    printf("\n--------------------------------------------------------\n");
 }
