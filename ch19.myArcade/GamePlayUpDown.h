@@ -6,6 +6,6 @@ int InitGamePlayUpDown(void);
 int UpdateGamePlayUpDown(void);
 int DestroyGamePlayUpDown(void);
 
-void MenuGamePlayUpDown(void);
+void DrawGamePlayUpDown(void);
 
 #endif // _GamePlayUpDown_H_
