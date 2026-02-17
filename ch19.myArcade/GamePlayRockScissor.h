@@ -6,6 +6,6 @@ int InitGamePlayRockScissor(void);
 int UpdateGamePlayRockScissor(void);
 int DestroyGamePlayRockScissor(void);
 
-void MenuGamePlayRockScissor(void);
+void DrawGamePlayRockScissor(void);
 
 #endif // _GamePlayRockScissor_H_
