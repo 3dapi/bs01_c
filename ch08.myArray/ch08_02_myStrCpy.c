@@ -1,28 +1,30 @@
 ﻿#include <stdio.h>
 
-int myStrCpy(char dst[], const char src[]);
+size_t myStrCpy(char dst[], size_t dest_size, const char src[]);
 
 int main(void)
 {
-	char strSource[] = "Hello world"; // source string
-	char strDest[256] = {0};          // copied string
+    char strSource[] = "Hello world, welcome!!!"; // source string
+    char strDest[20] = {0};          // copied string
 
-	int len = myStrCpy(strDest, strSource);
+    size_t len = myStrCpy(strDest, sizeof(strDest), strSource);
 
-	printf("string copy: %d - %s\n", len, strDest);
+    printf("string copy: %zu - %s\n", len, strDest);
 
-	return 0;
+    return 0;
 }
 
-int myStrCpy(char dst[], const char src[])
+size_t myStrCpy(char dst[], size_t dest_size, const char src[])
 {
-	int i = 0;
-	while(src[i] != '\0')
-	{
-		dst[i] = src[i];
-		++i;
-	}
-	dst[i] = '\0';
-	return i;
-}
+    if(0 == dest_size)  // 크기 0이면 복사할 수 없으므로 0 반환.
+        return 0;
 
+    size_t n=0;
+    --dest_size;        // 널문자 저장 공간을 위해 1 감소.
+    for(;'\0' != src[n] && 0<dest_size; ++n, --dest_size)
+    {
+        dst[n] = src[n];
+    }
+	dst[n] = '\0';      // 널문자 저장.
+    return n;
+}
