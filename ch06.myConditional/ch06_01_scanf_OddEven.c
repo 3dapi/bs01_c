@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int GetRandom(int min, int max);        // [min, max] 범위 random 값 생성 함수.
+int GetRandom(int minVal, int maxVal);        // [minVal, maxVal] 범위 random 값 생성 함수.
 
 int main(void)
 {
@@ -27,7 +27,7 @@ int main(void)
 	return 0;
 }
 
-int GetRandom(int min, int max)
+int GetRandom(int minVal, int maxVal)
 {
-	return min + rand() % (max - min + 1);
+	return minVal + rand() % (maxVal - minVal + 1);
 }

@@ -18,8 +18,8 @@ int main(void)
 		}
 	}
 
-	int max = arr[0][0];
-	int min = arr[0][0];
+	int maxVal = arr[0][0];
+	int minVal = arr[0][0];
 	int positive = 0, negative = 0;
 	int even = 0, odd = 0;
 
@@ -30,11 +30,11 @@ int main(void)
 		{
 			int value = arr[r][c];
 
-			if(value > max)
-				max = value;                      // 최대값
+			if(value > maxVal)
+				maxVal = value;                      // 최대값
 
-			if(value < min)
-				min = value;                      // 최소값
+			if(value < minVal)
+				minVal = value;                      // 최소값
 
 			// 양수/음수
 			if(value > 0)
@@ -48,8 +48,8 @@ int main(void)
 	}
 
 	// 결과 출력
-	printf("최대값: %d\n", max);
-	printf("최소값: %d\n", min);
+	printf("최대값: %d\n", maxVal);
+	printf("최소값: %d\n", minVal);
 	printf("양수 개수: %d, 음수 개수: %d\n", positive, negative);
 	printf("짝수 개수: %d, 홀수 개수: %d\n", even, odd);
 
