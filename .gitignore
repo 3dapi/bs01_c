@@ -7,6 +7,9 @@ Intermediate/
 Saved/
 Plugins/*/Intermediate/
 Plugins/*/Binaries/
+StarterContent/
+*/Content/ThirdPerson/
+*/Content/Characters/
 
 ########################################
 # svn
@@ -23,6 +26,7 @@ packages/
 .vs/
 .vscode/
 .tlog/
+UpgradeLog.htm
 *.tlog
 *.idb
 *.ilk

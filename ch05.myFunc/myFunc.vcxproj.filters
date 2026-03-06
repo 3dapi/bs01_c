@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch05_08_static.c">
+    <ClCompile Include="ch05_01_functions.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

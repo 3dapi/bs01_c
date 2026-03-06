@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch04_11_operator_sizeof.c">
+    <ClCompile Include="ch04_01_operator_comma.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
