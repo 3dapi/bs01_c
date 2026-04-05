@@ -4,7 +4,9 @@
 int main(void)
 {
     // 1) 문자열 리터럴과 배열의 차이
-    char* p = "World";     // 읽기 전용 메모리
+    // C에서는 허용되지만, C++에서는 허용되지 않는다.
+    // 문자열 리터럴은 수정할 수 없으므로 const char* 사용 권장
+    char* p   = "World";   // 읽기 전용 메모리.
     char  s[] = "World";   // 배열 공간에 복사
 
     printf("초기 상태\n");
@@ -12,7 +14,7 @@ int main(void)
     printf("s  문자열: %s\n\n", s);
 
     // 문자열 리터럴 수정 시도 (위험 코드, 주석을 풀고 테스트해 볼 것)
-    // p[0] = 'A';   // 많은 환경에서 런타임 오류 발생 가능
+    // p[0] = 'A';   // 정의되지 않은 동작(Undefined Behavior)
 
     // 배열은 수정 가능
     s[0] = 'A';
@@ -28,7 +30,7 @@ int main(void)
     char src[] = "Hello";
     char buf[32]={0};
 
-    strcpy(buf, src);   // 문자열 복사
+    strcpy(buf, src);   // 문자열 복사: 복사 대상인 buf 크기가 충분해야 함
     int len = (int)strlen(buf);
 
     printf("원본 문자열: %s\n", buf);
@@ -41,16 +43,16 @@ int main(void)
     printf("\n\n");
     
     // 4) 문자열 리터럴 풀 확인 (주소 비교)
-    char* a = "Hi";
-    char* b = "Hi";
+    const char* a = "Hi";
+    const char* b = "Hi";
 
     printf("문자열 리터럴 풀 테스트\n");
     printf("a 주소: %p\n", a);
     printf("b 주소: %p\n", b);
     if(a == b)
-        printf("a와 b는 같은 문자열 리터럴을 가리킨다.\n");
+        printf("a와 b는 같은 문자열 리터럴을 가리킬 수 있다.\n");
     else
-        printf("a와 b는 다른 위치를 가리킨다.\n");
+        printf("컴파일러에 따라 다른 위치를 가리킬 수도 있다.\n");
 
     return 0;
 }

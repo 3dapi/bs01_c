@@ -12,6 +12,7 @@ int main(void)
     int (*ptr_arr)[4] = NULL;
 
     // 배열 전체의 주소(&arr)를 배열 포인터에 저장
+    // C++에서는 명시적으로 캐스팅: ptr_arr = (int (*)[4])&arr;
     ptr_arr = &arr;
 
     for(int i=0; i<4; ++i)

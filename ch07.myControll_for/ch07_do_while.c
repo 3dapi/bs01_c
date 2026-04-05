@@ -9,7 +9,7 @@ int main(void)
     {
         printf("0 이상의 정수를 입력하세요: ");
         scanf("%d", &value);
-    } while(value < 0);
+    } while(0<=value);
 
     printf("입력한 값: %d\n", value);
     return 0;

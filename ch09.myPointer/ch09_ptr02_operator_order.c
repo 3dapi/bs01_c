@@ -4,7 +4,8 @@ int main(void)
 {
     int arrInt[] = {1000, 2000, 3000, 4000};
     int* ptr = arrInt;
-    printf("%d, %d\n", ++*ptr++, *ptr);
+    printf("++*ptr++: %d\n", ++*ptr++);
+    printf("*ptr: %d\n", *ptr);
 
     return 0;
 }

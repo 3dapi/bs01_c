@@ -1,22 +1,29 @@
 ﻿#include <stdio.h>
-#include <stdint.h> // uintptr_t를 사용하기 위해 필요
 
-int main()
+int main(void)
 {
-    int value = 0x12345678;
-    int* ptr = &value; // 포인터
+    // 의미있는 비교: 같은 배열 내의 포인터끼리 비교.
+    {
+        int arr[] = {10, 20, 30, 40, 50, 60};
 
-    // 1. 포인터를 uintptr_t로 캐스팅
-    uintptr_t address_as_int = (uintptr_t)ptr;
+        int* p = &arr[1];
+        int* q = &arr[5];
 
-    // 2. 출력 (주소는 시스템마다 다르게 나옵니다)
-    // %p는 포인터 주소를 출력하며, %lx는 부호 없는 long hexadecimal을 출력합니다.
-    printf("Original Pointer Address: %p\n", (void*)ptr);
-    printf("Address as uintptr_t (Hex): 0x%lx\n", (unsigned long)address_as_int);
+        printf("p < q : %d\n", p < q);      //  1 (의미 있는 비교)
+        printf("p == q: %d\n", p == q);     //  0
+        printf("q - p : %lld\n", q - p);    //  4 (q가 p보다 4개의 요소 뒤에 있다.)
+        printf("p - q : %lld\n", p - q);    // -4 (p가 q보다 4개의 요소 앞에 있다.)
+    }
+    // 의미 없는 비교: 서로 다른 객체의 포인터끼리 비교.
+    {
+        int a = 10;
+        int b = 20;
 
-    // (선택) 다시 포인터로 복원
-    int* restored_ptr = (int*)address_as_int;
-    printf("Restored Pointer Address: %p\n", (void*)restored_ptr);
+        int* p = &a;
+        int* q = &b;
+
+        printf("%d\n", p < q);  // 서로 다른 객체 → 의미 없는 비교
+    }
 
     return 0;
 }
