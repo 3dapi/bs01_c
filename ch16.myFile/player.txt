@@ -1,0 +1,5 @@
+Knight 10 25 15
+Archer 8 18 10
+Wizard 12 30 5
+Paladin 15 28 22
+Assassin 9 35 8

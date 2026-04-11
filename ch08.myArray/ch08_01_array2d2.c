@@ -3,7 +3,7 @@
 int main(void)
 {
     int arr2d[3][4] = {0};
-    int arr1d[12] = {0};
+    int arr1d[ 3*4] = {0};
 
     int row_count = sizeof(arr2d) / sizeof(arr2d[0]);       // 행 개수
     int col_count = sizeof(arr2d[0]) / sizeof(arr2d[0][0]); // 열 개수
@@ -18,6 +18,7 @@ int main(void)
         }
     }
 
+
     // 2차원 배열 → 1차원 배열
     for(int r = 0; r < row_count; ++r)
     {
@@ -27,6 +28,17 @@ int main(void)
             arr1d[index] = arr2d[r][c];
         }
     }
+
+    // 1차원 배열 인덱스.
+    int index = 0;
+    for (int r = 0; r < row_count; ++r)
+    {
+        for (int c = 0; c < col_count; ++c)
+        {
+            arr1d[index++] = arr2d[r][c];
+        }
+    }
+
 
     printf("1차원 배열 변환 결과:\n");
     for(int i = 0; i < row_count * col_count; ++i)
