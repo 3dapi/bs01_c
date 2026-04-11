@@ -1,0 +1,11 @@
+﻿#pragma once
+#ifndef _GamePlayRockScissor_H_
+#define _GamePlayRockScissor_H_
+
+int InitGamePlayRockScissor(void);
+int UpdateGamePlayRockScissor(void);
+int DestroyGamePlayRockScissor(void);
+
+void DrawGamePlayRockScissor(void);
+
+#endif // _GamePlayRockScissor_H_
