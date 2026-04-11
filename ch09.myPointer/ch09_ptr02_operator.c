@@ -3,12 +3,16 @@
 int main(void)
 {
     int arr[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+	int index = 4;
+	printf("index[arr] = %d\n", index[arr]);
  
     // arr[6]와 동일한 표현
     int value = 6[arr];
 
     printf("6[arr] = %d\n", 6[arr]);
 
+    printf("---------------------------------------------------\n");
 
     // 배열 표현식은 암시적으로 포인터로 변환. ptr = &arr[0]; 와 동일.
     int* ptr = arr;

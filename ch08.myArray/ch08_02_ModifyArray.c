@@ -1,6 +1,6 @@
 ﻿#include <stdio.h>
 
-void ModifyArray(int arr[], int size)
+void ModifyArray(int arr[100000000], int size)
 {
     for(int i = 0; i < size; ++i)
     {
@@ -17,7 +17,7 @@ int main(void)
         printf("%d ", data[i]);
     printf("\n");
 
-    ModifyArray(data, 5); // 배열의 주소가 전달된다.
+    ModifyArray(data, 5); // 배열 0 번째 원소의 주소가 전달된다.
 
     printf("함수 호출 후: ");
     for(int i = 0; i < 5; ++i)

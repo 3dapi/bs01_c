@@ -20,11 +20,13 @@ size_t myStrCpy(char dst[], size_t dest_size, const char src[])
         return 0;
 
     size_t n=0;
-    --dest_size;        // 널문자 저장 공간을 위해 1 감소.
+    dest_size -= 1;     // 널문자 저장 공간을 위해 1 감소.
+
     for(;'\0' != src[n] && 0<dest_size; ++n, --dest_size)
     {
         dst[n] = src[n];
     }
 	dst[n] = '\0';      // 널문자 저장.
+
     return n;
 }

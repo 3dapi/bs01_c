@@ -1,11 +1,12 @@
 ﻿#include <stdio.h>
+#include <stdlib.h>
 
 int myScanf(char buf[], int bufsize);
 
 int main(void)
 {
     char input_buf[20] = {0}; // 0으로 초기화 널 문자('\0')로 채움.
-
+    //scanf("%s", input_buf);
     myScanf(input_buf, sizeof(input_buf));
 
     printf("%s\n", input_buf);
