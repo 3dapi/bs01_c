@@ -2,7 +2,16 @@
 
 int main(void)
 {
-    int arr2d[3][4] = { {1, 2, 3, 4}, {}, {5, 6},};
+    int arr2d[3][4] =
+    {
+        {1, 2, 3, 4},
+        {0},
+        {5, 6},
+    };
+
+
+
+
     int arr[2][3][4] = {0};
 
     int layer_count = sizeof(arr) / sizeof(arr[0]);
